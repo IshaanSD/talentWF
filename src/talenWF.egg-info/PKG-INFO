@@ -37,14 +37,14 @@ Dynamic: license-file
 
 # talenWF
 
-A minimal TALEN window finder packaged for CLI and API use, intended to be a drop-in for MitoEdit's RunFindTALTask integration.
+A minimal TALEN window finder packaged for CLI and API use, intended to be a drop-in for MitoEdit's TAL finding functionality.
 
 ## Features
 
 - 🔍 **TALEN Window Finding**: Efficiently finds TALEN binding sites in DNA sequences
 - 🐍 **Python API**: Easy-to-use class-based interface
 - 💻 **Command Line Interface**: Ready-to-use CLI tool
-- 🔄 **MitoEdit Compatible**: Drop-in replacement for MitoEdit's RunFindTALTask
+- 🔄 **MitoEdit Compatible**: Drop-in replacement for MitoEdit's TAL finding functionality
 - 📊 **Pandas Integration**: Returns results as DataFrames for easy analysis
 - 🧬 **BioPython Support**: Robust FASTA file handling
 - ⚡ **Memory Efficient**: Generator-based processing for large sequences
@@ -92,17 +92,6 @@ task = FindTALTask(
     outpath="/tmp/talenWF.tsv"
 )
 df = task.run()
-
-# Or using the backward compatibility function
-from talenWF import RunFindTALTask
-df = RunFindTALTask(
-    fasta="/path/to/seq.fasta",
-    min_spacer=14,
-    max_spacer=18,
-    array_min=14,
-    array_max=18,
-    outpath="/tmp/talenWF.tsv"
-)
 ```
 
 ## Citation

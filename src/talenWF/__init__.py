@@ -1,5 +1,3 @@
-from .api import FindTALTask, RunFindTALTask
+from .api import FindTALTask
 
-__all__ = ["FindTALTask", "RunFindTALTask"]
-
-
+__all__ = ["FindTALTask"]

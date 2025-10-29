@@ -17,21 +17,8 @@ def main():
     parser.add_argument('--outpath', default='NA', help='Output path for TALE-NT')
     parser.add_argument('--filter_base', type=int, help='Filter base position for TALE-NT (comma separated)')
     parser.add_argument('--upstream_bases', type=str, help='Upstream bases for TALE-NT (comma separated)')
+    parser.add_argument('--gspec', action='store_true', help='Use G-specific RVD')
     args = parser.parse_args()
-
-    # Validate FASTA file exists and is readable
-    try:
-        with open(args.fasta, 'r') as f:
-            # Try to parse the first record to validate FASTA format
-            first_record = next(SeqIO.parse(f, 'fasta'))
-            logger.info(f"Processing FASTA file: {args.fasta}")
-            logger.info(f"First sequence: {first_record.id} (length: {len(first_record.seq)})")
-    except FileNotFoundError:
-        logger.error(f"FASTA file not found: {args.fasta}")
-        sys.exit(1)
-    except Exception as e:
-        logger.error(f"Error reading FASTA file: {e}")
-        sys.exit(1)
 
     # Run the TAL finding task
     logger.info("Starting TAL finding task...")
@@ -44,6 +31,7 @@ def main():
         outpath=args.outpath,
         filter_base=args.filter_base,
         upstream_bases=args.upstream_bases.split(',') if args.upstream_bases else ['T'],
+        gspec=args.gspec,
     ).run()
     logger.info("TAL finding task completed successfully!")
 

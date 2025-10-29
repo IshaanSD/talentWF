@@ -6,7 +6,7 @@ Simple script to check if the talenWF package is working correctly.
 def check_imports():
     """Check if all imports work correctly."""
     try:
-        from talenWF import FindTALTask, RunFindTALTask
+        from talenWF import FindTALTask
         print("✅ Imports successful")
         return True
     except ImportError as e:

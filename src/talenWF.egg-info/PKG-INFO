@@ -1,10 +1,9 @@
 Metadata-Version: 2.4
 Name: talenWF
-Version: 0.1.0
+Version: 0.1.2
 Summary: Modern TALEN window finder compatible with MitoEdit. Made as a part of the St. Jude KIDS25 BioHackathon Project. This tool is an effort to revamp and modernize the TAL Effector-Nucleotide Targeter (TALE-NT) 2.0 (Doyle et al., 2012, Nucleic Acids Research)
 Author-email: Ishaan Gupta <i3gupta@ucsd.edu>
 Maintainer-email: Ishaan Gupta <i3gupta@ucsd.edu>
-License: MIT
 Project-URL: Homepage, https://github.com/IshaanSD/talenWF
 Project-URL: Bug Reports, https://github.com/IshaanSD/talenWF/issues
 Project-URL: Source, https://github.com/IshaanSD/talenWF
@@ -16,13 +15,12 @@ Classifier: Intended Audience :: Science/Research
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
-Requires-Python: >=3.8
+Requires-Python: >=3.9
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: biopython>=1.80
@@ -33,6 +31,8 @@ Requires-Dist: pytest>=6.0; extra == "dev"
 Requires-Dist: pytest-cov>=2.0; extra == "dev"
 Requires-Dist: black>=22.0; extra == "dev"
 Requires-Dist: flake8>=4.0; extra == "dev"
+Requires-Dist: build>=1.0.0; extra == "dev"
+Requires-Dist: twine>=4.0.0; extra == "dev"
 Dynamic: license-file
 
 # talenWF

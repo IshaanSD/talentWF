@@ -1,20 +1,19 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=68.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "talenWF"
-version = "0.1.0"
+version = "0.1.2"
 description = "Modern TALEN window finder compatible with MitoEdit. Made as a part of the St. Jude KIDS25 BioHackathon Project. This tool is an effort to revamp and modernize the TAL Effector-Nucleotide Targeter (TALE-NT) 2.0 (Doyle et al., 2012, Nucleic Acids Research)"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.9"
 authors = [
     { name = "Ishaan Gupta", email = "i3gupta@ucsd.edu" }
 ]
 maintainers = [
     { name = "Ishaan Gupta", email = "i3gupta@ucsd.edu" }
 ]
-license = { text = "MIT" }
 keywords = ["TALEN", "genome editing", "bioinformatics", "mitochondria"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -22,7 +21,6 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
@@ -41,6 +39,8 @@ dev = [
   "pytest-cov>=2.0",
   "black>=22.0",
   "flake8>=4.0",
+  "build>=1.0.0",
+  "twine>=4.0.0",
 ]
 
 [project.urls]
